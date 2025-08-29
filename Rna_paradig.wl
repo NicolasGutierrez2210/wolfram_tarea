@@ -9,46 +9,46 @@ dataAND = {
   <|"Input" -> {1., 1.}, "Output" -> "1"|>    
 };
 
-perceptron = NetChain[                       (* Definimos un perceptrón simple *)
-  {LinearLayer[2], SoftmaxLayer[]},          (* capa lineal + softmax para 2 clases *)
+perceptron = NetChain[                       (* Definimos un perceptrOn simple *)
+  {LinearLayer[2], SoftmaxLayer[]},          (*  Definimos la capa lineal + softmax para 2 clases *)
   "Input" -> {2},                            (* 2 entradas reales *)
   "Output" -> NetDecoder[{"Class", classes}] (* salida decodificada a "0" o "1" *)
 ];
 
-netAND = NetTrain[perceptron, dataAND,       (* Entrenamos la red para AND *)
-  MaxTrainingRounds -> 2000,                 (* número de iteraciones de entrenamiento *)
+netAND = NetTrain[perceptron, dataAND,       (* Se entrena la red para AND*)
+  MaxTrainingRounds -> 2000,                 (* numero de iteraciones de entrenamiento *)
   BatchSize -> 4,                            (* usamos las 4 combinaciones por lote *)
-  ValidationSet -> None,                     (* no separamos validación por dataset tan pequeño *)
+  ValidationSet -> None,                     (* no separamos validacion por dataset tan pequeño *)
   Method -> {"ADAM","LearningRate"->0.05}    (* optimizador ADAM con tasa 0.05 *)
 ];
 
-Table[{x, y, netAND[<|"Input" -> {x,y}|>]}, {x,0,1}, {y,0,1}]  (* Probamos AND *)
+Table[{x, y, netAND[<|"Input" -> {x,y}|>]}, {x,0,1}, {y,0,1}]  (* Se prueba AND *)
 
 
 (* ---------- OR ---------- *)
 dataOR = {                                  
-  <|"Input" -> {0., 0.}, "Output" -> "0"|>,   (* 0 OR 0 = 0 *)
-  <|"Input" -> {0., 1.}, "Output" -> "1"|>,   (* 0 OR 1 = 1 *)
-  <|"Input" -> {1., 0.}, "Output" -> "1"|>,   (* 1 OR 0 = 1 *)
-  <|"Input" -> {1., 1.}, "Output" -> "1"|>    (* 1 OR 1 = 1 *)
+  <|"Input" -> {0., 0.}, "Output" -> "0"|>,   
+  <|"Input" -> {0., 1.}, "Output" -> "1"|>,   
+  <|"Input" -> {1., 0.}, "Output" -> "1"|>,  
+  <|"Input" -> {1., 1.}, "Output" -> "1"|>   
 };
 
-netOR = NetTrain[perceptron, dataOR,         (* Entrenamos la red para OR *)
+netOR = NetTrain[perceptron, dataOR,         (* Se entrena la red para OR *)
   MaxTrainingRounds -> 2000,
   BatchSize -> 4,
   ValidationSet -> None,
   Method -> {"ADAM","LearningRate"->0.05}
 ];
 
-Table[{x, y, netOR[<|"Input" -> {x,y}|>]}, {x,0,1}, {y,0,1}]  (* Probamos OR *)
+Table[{x, y, netOR[<|"Input" -> {x,y}|>]}, {x,0,1}, {y,0,1}]  (* Se prueba OR *)
 
 
 (* ---------- XOR ---------- *)
 dataXOR = {
-  <|"Input" -> {0., 0.}, "Output" -> "0"|>,   (* 0 XOR 0 = 0 *)
-  <|"Input" -> {0., 1.}, "Output" -> "1"|>,   (* 0 XOR 1 = 1 *)
-  <|"Input" -> {1., 0.}, "Output" -> "1"|>,   (* 1 XOR 0 = 1 *)
-  <|"Input" -> {1., 1.}, "Output" -> "0"|>    (* 1 XOR 1 = 0 *)
+  <|"Input" -> {0., 0.}, "Output" -> "0"|>,   
+  <|"Input" -> {0., 1.}, "Output" -> "1"|>,   
+  <|"Input" -> {1., 0.}, "Output" -> "1"|>,   
+  <|"Input" -> {1., 1.}, "Output" -> "0"|>    
 };
 
 mlp = NetChain[                               (* Red multicapa para XOR *)
@@ -57,7 +57,7 @@ mlp = NetChain[                               (* Red multicapa para XOR *)
   "Output" -> NetDecoder[{"Class", classes}]
 ];
 
-netXOR = NetTrain[mlp, dataXOR,               (* Entrenamos la red para XOR *)
+netXOR = NetTrain[mlp, dataXOR,               (* Se entrena la red para  XOR *)
   MaxTrainingRounds -> 2000,
   BatchSize -> 4,
   ValidationSet -> None,
@@ -65,4 +65,5 @@ netXOR = NetTrain[mlp, dataXOR,               (* Entrenamos la red para XOR *)
 ];
 
 Table[{x, y, netXOR[<|"Input" -> {x,y}|>]}, {x,0,1}, {y,0,1}]  (* Probamos XOR *)
+
 
