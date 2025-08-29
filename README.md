@@ -2,13 +2,13 @@
 
 Este trabajo implementa redes neuronales para aprender las compuertas logicas **AND**, **OR** y **XOR** usando **Wolfram Language**.
 
-- **AND / OR** → resueltas con un **perceptrón simple** (capa lineal + softmax).  
-- **XOR** → resuelta con un **perceptrón multicapa (MLP)** con capa oculta y activación no lineal (`Tanh`).  
+- **AND / OR** → resueltas con un perceptron simple (capa lineal + softmax).  
+- **XOR** → resuelta con un perceptron multicapa (MLP) con capa oculta y activacion no lineal (`Tanh`).  
 
 ## Archivos del repositorio
 
 - `Rna_paradig.wl` → script con el código de las 3 compuertas, con comentarios explicativos.  
-- *(opcional)* `Rna_paradig.nb` → notebook en formato Wolfram (para abrir en Mathematica / Wolfram Cloud).  
+- `Rna_paradig.nb` → notebook en el formato de Wolfram (para abrir en Mathematica / Wolfram Cloud).  
 
 ## Requisitos
 
@@ -52,6 +52,6 @@ wolframscript -file Rna_paradig.wl
 (1,1) -> 0
 ```
 > COSA A TENER EN CUENTA :
-En la ejecucióO real puede aparecer como listas anidadas pero equivale a lo mismo de las tablas de verdad.
+En la ejecucion real puede aparecer como listas anidadas pero equivale a lo mismo de las tablas de verdad.
 
 
