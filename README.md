@@ -54,4 +54,12 @@ wolframscript -file Rna_paradig.wl
 > COSA A TENER EN CUENTA :
 En la ejecucion real puede aparecer como listas anidadas pero equivale a lo mismo de las tablas de verdad.
 
+## Conclusion
+
+Este trabajo permitio comprobar como las redes neuronales pueden aprender el comportamiento de compuertas logicas basicas.  
+En el caso de **AND** y **OR**, un perceptron simple fue suficiente debido a que son funciones linealmente separables. Sin embargo, la compuerta **XOR** requirio un perceptron multicapa (MLP) con una capa oculta y activacion no lineal, evidenciando la necesidad de mayor capacidad de representacion en problemas no lineales.  
+
+Las salidas del entrenamiento en Wolfram se presentan como listas anidadas, pero corresponden directamente a las tablas de verdad de cada compuerta. Esto valida que los modelos convergieron correctamente y que la implementacion en formato `.wl` es funcional y adecuada para compartir y reproducir en diferentes entornos.  
+
+En conclusion, el trabajo evidencia la relacion entre la teoria de separabilidad lineal y la practica con redes neuronales, mostrando de forma clara como se modelan funciones logicas fundamentales mediante distintos niveles de complejidad en las arquitecturas.
 
