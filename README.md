@@ -51,7 +51,7 @@ wolframscript -file Rna_paradig.wl
 (1,0) -> 1
 (1,1) -> 0
 ```
-> **COSA A TENER EN CUENTA  **:
+> COSA A TENER EN CUENTA :
 En la ejecucióO real puede aparecer como listas anidadas pero equivale a lo mismo de las tablas de verdad.
-> 
+
 
