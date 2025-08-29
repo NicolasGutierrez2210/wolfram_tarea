@@ -7,7 +7,7 @@ Este trabajo implementa redes neuronales para aprender las compuertas logicas **
 
 ## Archivos del repositorio
 
-- `Rna_paradig.wl` → script con el código de las 3 compuertas, con comentarios explicativos.  
+- `Rna_paradig.wl` → script con el codigo de las 3 compuertas, con comentarios explicativos.  
 - `Rna_paradig.nb` → notebook en el formato de Wolfram (para abrir en Mathematica / Wolfram Cloud).  
 
 ## Requisitos
@@ -27,7 +27,7 @@ wolframscript -file Rna_paradig.wl
 ```
 ### 2. En Wolfram Desktop o Cloud
 1. Abre el archivo `Rna_paradig.wl `
-2. Ejecuta el código (Shift+Enter).
+2. Ejecuta el codigo (Shift+Enter).
 
 ### Resultados obtenidos 
 ## Compuerta AND
