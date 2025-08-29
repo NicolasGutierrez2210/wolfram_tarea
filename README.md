@@ -18,10 +18,12 @@ Se necesita tener acceso a alguno de estos entornos para ejecutarlo:
 - Wolfram Cloud
 - WolframScript (para ejecutar archivos `.wl` desde la terminal)  
 
-## ▶️ Ejecucion
+## Ejecucion
 
 ### 1. Con WolframScript (desde terminal)
 
 ```bash
 wolframscript -file redes_logicas.wl
 ```
+### 2. En Wolfram Desktop o Cloud
+1. Abre el archivo `redes_logicas.wl. ` 
