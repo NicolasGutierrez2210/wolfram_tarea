@@ -29,22 +29,22 @@ wolframscript -file Rna_paradig.wl
 1. Abre el archivo `Rna_paradig.wl `
 2. Ejecuta el código (Shift+Enter).
 
-## Resultados obtenidos 
-# Compuerta AND
+### Resultados obtenidos 
+## Compuerta AND
 ```bash
 (0,0) -> 0
 (0,1) -> 0
 (1,0) -> 0
 (1,1) -> 1
 ```
-# Compuerta OR
+## Compuerta OR
 ```bash
 (0,0) -> 0
 (0,1) -> 1
 (1,0) -> 1
 (1,1) -> 1
 ```
-# Compuerta XOR
+## Compuerta XOR
 ```bash
 (0,0) -> 0
 (0,1) -> 1
