@@ -7,8 +7,8 @@ Este trabajo implementa redes neuronales para aprender las compuertas logicas **
 
 ## Archivos del repositorio
 
-- `redes_logicas.wl` → script con el código de las 3 compuertas, con comentarios explicativos.  
-- *(opcional)* `RedesLogicas.nb` → notebook en formato Wolfram (para abrir en Mathematica / Wolfram Cloud).  
+- `Rna_paradig.wl` → script con el código de las 3 compuertas, con comentarios explicativos.  
+- *(opcional)* `Rna_paradig.nb` → notebook en formato Wolfram (para abrir en Mathematica / Wolfram Cloud).  
 
 ## ⚙️ Requisitos
 
@@ -23,7 +23,35 @@ Se necesita tener acceso a alguno de estos entornos para ejecutarlo:
 ### 1. Con WolframScript (desde terminal)
 
 ```bash
-wolframscript -file redes_logicas.wl
+wolframscript -file Rna_paradig.wl
 ```
 ### 2. En Wolfram Desktop o Cloud
-1. Abre el archivo `redes_logicas.wl. ` 
+1. Abre el archivo `Rna_paradig.wl `
+2. Ejecuta el código (Shift+Enter).
+
+## Resultados obtenidos 
+# Compuerta AND
+```bash
+(0,0) -> 0
+(0,1) -> 0
+(1,0) -> 0
+(1,1) -> 1
+```
+# Compuerta OR
+```bash
+(0,0) -> 0
+(0,1) -> 1
+(1,0) -> 1
+(1,1) -> 1
+```
+# Compuerta XOR
+```bash
+(0,0) -> 0
+(0,1) -> 1
+(1,0) -> 1
+(1,1) -> 0
+```
+> **COSA A TENER EN CUENTA  **:
+En la ejecucióO real puede aparecer como listas anidadas pero equivale a lo mismo de las tablas de verdad.
+> 
+
